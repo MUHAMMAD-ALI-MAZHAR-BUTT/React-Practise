@@ -26,3 +26,23 @@ class Pr extends React .Component{
 }
 export {Pr};
 //--------------------------------------------Functional component
+import { useState } from 'react';
+function App() {
+  const [name,SetName]=useState("f");
+  const [last,SetLast]=useState("f");
+  const [age,SetAge]=useState("fe");
+  return (
+    <> 
+    <h1>{name} , {last} , {age}</h1>
+    <form>
+     <input type="text" onChange={(e)=>SetName(e.target.value)} />
+     <input type="text" onChange={(e)=>SetLast(e.target.value)} />
+     <input type="number" onChange={(e)=>SetAge(e.target.value)} />
+     <input type="submit" />
+     </form>
+    </>
+  );
+}
+
+export default App;
+
